@@ -5,7 +5,7 @@ fun main(): Unit {
 //    lenMethod(1, 2, 3, 4, 5, 6)
 
     //lambda 表达
-    val addMethod: (Int, Int) -> Int = { a, b -> a + b }
+//    val addMethod: (Int, Int) -> Int = { a, b -> a + b }
 //    val sum = addMethod(9, 8)
 //    print(sum)
 
@@ -45,13 +45,22 @@ fun main(): Unit {
 //        println(i)
 //    }
 
-    val i = 5
-    when (i) {
-        1 -> println(i)
-        2 -> println(i)
-        in 3..5 -> println(i)
-        else -> println(i)
-    }
+//    val i = 5
+//    when (i) {
+//        1 -> println(i)
+//        2 -> println(i)
+//        in 3..5 -> println(i)
+//        else -> println(i)
+//    }
+
+//    val allen = Allen()
+//    allen.show()
+
+    //次构造
+    val person = Person()
+    //主构造
+    val person1 = Person(223)
+
 }
 
 
@@ -88,5 +97,37 @@ fun lenMethod(vararg value: Int) {
         println(i)
     }
 }
+
+
+class Allen {
+
+    //标签效果
+    val s = "hahaha"
+    val item = listOf<String>("aaa", "bbb", "ccc")
+
+    fun show() {
+//        println(s)
+//        println(this.s)
+//        println(this@Allen.s)
+
+
+        //循环
+//        for (i in item){
+//            println(i)
+//        }
+
+
+        item.forEach {
+            println(it)
+        }
+
+        //打印下标
+        for (index in item.indices) {
+            println("$index : 值 ${item[index]}")
+        }
+
+    }
+}
+
 
 
