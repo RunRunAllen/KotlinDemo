@@ -23,8 +23,8 @@ class LoginActivity : AppCompatActivity() {
                     val userNameStr = user_phone_et.text.toString()
                     val userPwdStr = user_password_et.text.toString()
 
-                    APIClient.getInstance().instanceRetrofit(WanAndroidApi::class.java)
-                        .loginAction(userNameStr, userPwdStr)
+                    val client = APIClient.getInstance().instanceRetrofit(WanAndroidApi::class.java)
+                    client.loginAction(userNameStr, userPwdStr)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe {
