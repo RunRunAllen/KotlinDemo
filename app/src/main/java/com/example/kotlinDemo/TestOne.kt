@@ -61,6 +61,31 @@ fun main(): Unit {
     //主构造
     val person1 = Person(223)
 
+
+//    val  result :()->Int={}
+    val result: (Int, Int) -> Int = { n1, n2 ->
+        n1 + n2
+    }
+//    val result2 = {}
+    val result2 = { n1: Int, n2: Int ->
+        n1 + n2
+    }
+    //两种不同的写法
+
+
+    var num1: (String, String) -> String = { n1, n2 ->
+        n1 + n2
+    }
+
+    var num2 = { n1: Int, n2: Int ->
+        n1 + n2
+    }
+
+    var num3: (String) -> String = { str -> str }
+
+    var sex = { sex: Char -> if (sex == 'M') "我是女的" else "我的男的" }
+
+
 }
 
 
@@ -127,6 +152,8 @@ class Allen {
         }
 
     }
+
+
 }
 
 
